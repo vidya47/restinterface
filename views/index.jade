@@ -1,0 +1,53 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to our REST interface connected to Things!
+
+    // Wrapper
+    #wrapper
+
+        // DEVICE INFO
+        #deviceInfo
+            h2 Device Info
+            p
+                strong Name:
+                |  <span id='deviceInfoName'></span>
+                br
+                strong Model:
+                |  <span id='deviceInfoModel'></span>
+                br
+                strong Make:
+                |  <span id='deviceInfoMake'></span>
+                br
+                strong Year:
+                |  <span id='deviceInfoYear'></span>
+        // /DEVICE INFO
+
+        // DEVICE LIST
+        h2 Device List
+        #deviceList
+            table
+                thead
+                    th DeviceName
+                    th Status
+                    th Delete?
+                tbody
+        // /DEVICE LIST
+
+        // ADD DEVICE
+        h2 Add Device
+        #addDevice
+            fieldset
+                input#inputDeviceName(type='text', placeholder='Devicename')
+                input#inputDeviceStatus(type='text', placeholder='Status')
+                br
+                input#inputDeviceModel(type='text', placeholder='Model')
+                input#inputDeviceMake(type='text', placeholder='Make')
+                br
+                input#inputDeviceYear(type='text', placeholder='Year')
+                br
+                button#btnAddDevice Add Device
+        // /ADD DEVICE
+
+    // /WRAPPER

@@ -1,0 +1,14 @@
+form(method="POST", action = "/deviceList/#{deviceList._id}")
+  input(type="hidden", name="_method", value="PUT")
+  p Name:
+    input(type="text", name="deviceName")
+  p Status:
+    input(type="text", name="status")
+  p Model:
+    input(type="text", name="Model")
+  p Make:
+    input(type="text", name="Make")
+  p Year:
+    input(type="number", name="Year")
+  p
+    input(type="Submit")
